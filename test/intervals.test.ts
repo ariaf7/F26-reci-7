@@ -26,8 +26,23 @@ describe('mergeIntervals', () => {
       }),
     );
   });
+  // Pattern: invariant. The input array and the intervals in it are not modified.
+  it.todo('the input array remains the same after running mergeIntervals ')
+  // Pattern: invariant. The output covers exactly the same points as the input.
+  it.todo('input and output cover exactly the same points')
+  // Pattern: invariant. The output is sorted and consecutive intervals neither overlap nor touch.
+  it.todo('for every i, out[i][1] < out[i+1][0]')
+  // Pattern: metamorphic. Reordering the input does not change the output.
+  it.todo('every input with the same intervals in any order produces the same output ')
+  // Pattern: metamorphic. Adding a duplicate of an input interval does not change the output
+  it.todo('same inputs, except one has duplicates produces same output')
+  // Pattern: algebraic. Merging an already-merged result changes nothing (idempotence).
+  it.todo('running mergeIntervals twice produces the same output ')
+  // Pattern: conditional. If the input is already sorted and disjoint, the output equals the input.
+  it.todo('already-disjoint input comes back unchanged')
+  // Pattern: conditional. If any interval has start > end or a non-integer endpoint, it throws a RangeError.
+  it.todo('illegal input produces correct error')
+  // Pattern: differential. Counting covered stretches point by point gives the same number as the length of mergeIntervals' output.
+  it.todo('the number of covered stretches found by scanning points equals the number of output intervals')
 
-  // Add your properties here. Aim for at least one of each pattern:
-  // invariant, algebraic, metamorphic, differential, conditional.
-  //
 });
