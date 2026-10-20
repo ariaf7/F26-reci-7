@@ -16,7 +16,8 @@ const endpoint = fc.integer({ min: -20, max: 20 });
 // the counterexample.
 const interval: fc.Arbitrary<Interval> = fc
   .tuple(endpoint, fc.nat({ max: 10 }))
-  .map(([start, len]) => [start, start + len] as Interval);const intervalList = fc.array(interval, { maxLength: 12});
+  .map(([start, len]) => [start, start + len] as Interval);
+const intervalList = fc.array(interval, { maxLength: 12});
 
 const disjointList: fc.Arbitrary<Interval[]> = fc
   .tuple(endpoint, fc.array(fc.tuple(fc.nat({ max: 5 }), fc.integer({ min: 1, max: 4 })), { maxLength: 8 }))
