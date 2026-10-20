@@ -36,7 +36,7 @@ export const mutants: Record<string, MatchGuess> = {
       if (n > 0) { left.set(c, n - 1); return 'Y'; }
       return 'B';
     });
-  },
+  },//secret === "ACAAA", guess === "CCAAA", single pass returns "YGGGG", should be "BGGGG"
 
   // Arguments mixed up somewhere in the call chain.
   swapped: (secret, guess) => {
